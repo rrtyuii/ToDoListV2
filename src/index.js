@@ -1,6 +1,6 @@
 import { domManipulation } from './DomManipulation'
 
-import { auth, db } from './auth'
+
 import { EventHandler } from './EventHandler'
 
 
