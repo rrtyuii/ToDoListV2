@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>To Do List</title>
+
+    </script>
+</head>
+
+<body class='grey lighten-3'>
+    <!-- NAVBAR -->
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="navbar">
+            <div id="NavbuttonContainer">
+                <button id="navButton"> 
+                    <img src="Images/menu.svg">
+                </button>
+            </div>
+
+            <div id="logo">
+
+                <a href="#" class="brand-logo">
+                    <text style="color:black;"> To Do List</text>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+
+    <div id='mainWrapper'>
+        <div id="overlay" class='hidden'>
+
+        </div>
+        <div id="menuContainer">
+            <ul id="catogories">
+                <li id='allTasks' class="selectedCategory categoriesSelection">
+                    All Tasks
+                </li>
+
+
+
+            </ul>
+
+            <button id="newCategory">
+                <p> 
+                    <img src="Images/plus.svg">
+                    New Category
+                </p>
+            </button>
+
+
+
+
+            <form id="NewCategoryForm" class="hidden">
+
+                <input id="newCategoryInput" type="text" name="Category-name" placeHolder="Category Name" required>
+                <div id="addCategoryButtonContainer">
+                    <button id="addNewCategoryButton" type="reset" class="save" disabled> 
+                        <img src="Images/add-24px.svg">
+                    </button>
+                    <button id="cancelNewCategoryButton" type="reset" class="cancel"> 
+                        <img src="Images/x.svg">
+                    </button>
+                </div>
+
+            </form>
+
+
+
+        </div>
+
+        <div id="contentContainer">
+
+            <ul id='taskList'>
+
+            </ul>
+            <button id="newTaskButton">
+                        <p> 
+                            <img src="Images/plus.svg">
+                            New Task
+                        </p>
+            </button>
+
+
+            <div id="newClassForm" class='hidden'>
+                <div id="TitleAndDescription">
+                    <span id="NewTaskTag">
+                        New Task
+                    </span>
+                    <input type="text" name="TaskName" id="TaskNameCreate" placeholder="Task Name" required>
+                    <input type="text" name="TaskDescription" id="TaskDescriptionCreate" placeholder="Task Description" required> </input>
+                </div>
+                <div id="CategoryDropDown">
+                    <span id="CategoryDropDownTag">
+                        Category
+                    </span>
+                    <select name="CategorySelect" class="dropDownCategory" id="CategorySelectForTask">
+
+
+                    </select>
+
+
+                </div>
+
+                <div id='PriorityForTask'>
+                    <span> 
+                        Priority    
+                        </span>
+
+                    <select name="TaskPrioritySelect" class="TaskPriorityDropDown" id="TaskPriorityDropDown">
+                            <option value="3"> 
+                                Low Priority
+                            </option> 
+                            <option value="2"> 
+                                    Medium Priority
+                                </option> 
+                                <option value="1"> 
+                                        High Priority
+                                    </option> 
+
+                    </select>
+
+                    <input type="date" name="dateDue" id="dateForTask" required>
+
+                </div>
+                <div id="createButtonContainer">
+                    <button id="CreateTaskButton" type="reset" class="save" disabled> 
+                                <img src="Images/add-24px.svg">
+                            </button>
+                    <button id="CancelCreateTask" type="reset" class="cancel"> 
+                                <img src="Images/x.svg">
+                            </button>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div id="EditClassForm" class='hidden'>
+                <div id="EditTitleAndDescription">
+                    <span id="EditNewTaskTag">
+                        New Task
+                    </span>
+                    <input type="text" name="TaskName" id="EditTaskNameCreate" placeholder="Task Name" required>
+                    <input type="text" name="TaskDescription" id="EditTaskDescriptionCreate" placeholder="Task Description" required> </input>
+                </div>
+                <div id="EditCategoryDropDown">
+                    <span id="EditCategoryDropDownTag">
+                        Category
+                    </span>
+                    <select name="CategorySelect" class="dropDownCategory" id="EditCategorySelectForTask">
+
+
+                    </select>
+
+
+                </div>
+
+                <div id='EditPriorityForTask'>
+                    <span> 
+                        Priority    
+                        </span>
+
+                    <select name="TaskPrioritySelect" class="TaskPriorityDropDown" id="EditTaskPriorityDropDown">
+                            <option value="3"> 
+                                Low Priority
+                            </option> 
+                            <option value="2"> 
+                                    Medium Priority
+                                </option> 
+                                <option value="1"> 
+                                        High Priority
+                                    </option> 
+
+                    </select>
+
+                    <input type="date" name="dateDue" id="EditdateForTask" required>
+
+                </div>
+                <div id="EditcreateButtonContainer">
+                    <button id="EditCreateTaskButton" type="reset" class="save"> 
+                                <img src="Images/add-24px.svg">
+                            </button>
+                    <button id="EditCancelCreateTask" type="reset" class="cancel"> 
+                                <img src="Images/x.svg">
+                            </button>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <form id="EditCategoryForm" class="hidden">
+            <h2 id='editCategoryHeader'> Edit Category</h2>
+            <input type="text" name="cateogry-Name" id="editCategoryName" placeholder="Category Name" required>
+
+            <button id="EditCategoryButton" type="reset" class="save" disabled> 
+                    <img src="Images/add-24px.svg">
+                </button>
+            <button id="CancelEdit" type="reset" class="cancel"> 
+                    <img src="Images/x.svg">
+                </button>
+
+
+
+
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
